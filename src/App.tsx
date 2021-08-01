@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import { FC } from "react";
+import QuoteCard from "./components/QuoteCard";
+import "./scss/Index.scss";
+const App: FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app">
+      <header className="header">
+        <h1>Anime quotes🍃</h1>
       </header>
+      <main>
+        <QuoteCard />
+      </main>
+      <footer>
+        <p>
+          with ❤️ by{" "}
+          <a href="https://github.com/bixxter" target="_blank" rel="noreferrer">
+            bixxter
+          </a>{" "}
+          2021
+        </p>
+        <p>
+          quotes api by:
+          <a
+            href="https://github.com/rocktimsaikia/anime-chan"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Rocktim Saikia
+          </a>
+        </p>
+        <p>
+          anime discovery platform:
+          <a
+            href="https://kitsu.docs.apiary.io"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Kitsu API
+          </a>
+        </p>
+      </footer>
     </div>
   );
-}
+};
 
 export default App;

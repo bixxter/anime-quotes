@@ -1,0 +1,105 @@
+@import "./Variables.scss";
+@import "./Mixins.scss";
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500&display=swap");
+
+a {
+  color: $brown;
+}
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  h1 {
+    text-align: center;
+    color: $brown;
+  }
+}
+.header {
+  @include flex(row, center, center);
+}
+
+main {
+  padding: 2rem 5rem;
+  flex-grow: 1;
+  @include flex(column, center, center);
+}
+.card {
+  width: 100%;
+  padding: 1rem;
+  background: $darkGreen;
+  border-radius: 0.5rem;
+  color: $lightGreen;
+  min-height: 400px;
+  @include flex(row, center, center);
+}
+.cardInner {
+  @include flex(column, center, center);
+  h1 {
+    color: $milkyBrown;
+  }
+  img {
+    max-height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  p {
+    font-family: "EB Garamond", serif;
+    font-size: 2rem;
+    text-align: center;
+    color: $lightGreen;
+  }
+  span {
+    font-family: "EB Garamond", serif;
+    color: $milkyBrown;
+    font-size: 1.5rem;
+  }
+}
+.btn {
+  border: none;
+  background: $brown;
+  color: $milkyBrown;
+  font-weight: 800;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 200ms;
+  text-align: center;
+  &:hover {
+    background: #000;
+  }
+  &:last-child {
+    margin-left: 0.5rem;
+  }
+}
+.cardInner__buttons {
+  margin-top: 2rem;
+  @include flex(row, center, stretch);
+}
+footer {
+  color: $brown;
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    padding: 2rem;
+  }
+  .cardInner {
+    p,
+    span {
+      font-size: 1.3rem;
+    }
+  }
+}
+@media only screen and (max-width: 400px) {
+  .cardInner {
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
