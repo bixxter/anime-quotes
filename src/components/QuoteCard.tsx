@@ -30,6 +30,7 @@ const QuoteCard: FC = () => {
   useEffect(() => {
     loadQuote();
   }, []);
+
   return (
     <div className="card">
       {data && !isLoading ? (

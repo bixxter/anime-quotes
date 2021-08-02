@@ -1,63 +1,38 @@
-@import "./Variables.scss";
+div.waves {
+  margin-top: auto;
+  width: 100%;
+  z-index: 99;
+  position: relative;
+}
 
-.loader {
-  display: grid;
-  place-items: center;
-}
-#loader {
-  width: 100px;
-  height: 40px;
+svg {
   position: absolute;
-  div {
-    width: 20px;
-    height: 20px;
-    background: $milkyBrown;
-    border-radius: 50%;
-    position: absolute;
-  }
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  animation-name: move-left;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
-#d1 {
-  animation: animate 2s linear infinite;
+.spacer {
+  height: 100px;
+  width: 100%;
 }
-#d2 {
-  animation: animate 2s linear infinite -0.4s;
-}
-#d3 {
-  animation: animate 2s linear infinite -0.8s;
-}
-#d4 {
-  animation: animate 2s linear infinite -1.2s;
-}
-#d5 {
-  animation: animate 2s linear infinite -1.6s;
-}
-@keyframes animate {
+
+@keyframes example {
   0% {
-    left: 100px;
-    top: 0;
+    left: 0px;
+    top: 0px;
   }
-  80% {
-    left: 0;
-    top: 0;
+
+  50% {
+    left: -2000px;
+    top: 200px;
   }
-  85% {
-    left: 0;
-    top: -20px;
-    width: 20px;
-    height: 20px;
-  }
-  90% {
-    width: 40px;
-    height: 15px;
-  }
-  95% {
-    left: 100px;
-    top: -20px;
-    width: 20px;
-    height: 20px;
-  }
+
   100% {
-    left: 100px;
-    top: 0;
+    left: 0px;
+    top: 0px;
   }
 }
